@@ -1,0 +1,26 @@
+name: movie_app
+description: A Flutter movie app for a coding test
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.19.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  provider: ^6.1.2
+  http: ^1.2.2
+  cached_network_image: ^3.2.3
+  youtube_player_flutter: ^9.1.1
+  video_player: ^2.4.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  lint: ^2.0.0
+  flutter_lints: ^2.0.0
+  integration_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
