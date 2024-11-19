@@ -6,6 +6,7 @@ import '../providers/movie_provider.dart';
 import '../widgets/cast_list.dart';
 import '../widgets/review_list.dart';
 import '../widgets/movie_list.dart';
+import 'package:flutter/scheduler.dart'; // Add this import
 
 class MovieDetailsScreen extends StatefulWidget {
   final int movieId;
@@ -20,9 +21,12 @@ class _MovieDetailsScreenState extends State<MovieDetailsScreen> {
   @override
   void initState() {
     super.initState();
-    // Fetch movie details on screen load
-    Provider.of<MovieProvider>(context, listen: false)
-        .fetchMovieDetails(widget.movieId);
+    // Use addPostFrameCallback to delay the fetch operation
+    SchedulerBinding.instance.addPostFrameCallback((_) {
+      // Fetch movie details on screen load after the first frame
+      Provider.of<MovieProvider>(context, listen: false)
+          .fetchMovieDetails(widget.movieId);
+    });
   }
 
   @override

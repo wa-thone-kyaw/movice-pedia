@@ -37,8 +37,11 @@ class SimilarMoviesScreen extends StatelessWidget {
                                 fontSize: 18, fontWeight: FontWeight.bold)),
                       ),
                       MovieList(
-                          movies: movieProvider.movieDetails!.similarMovies
-                              .cast<Movie>()),
+                        movies: movieProvider.movieDetails?.similarMovies
+                                .map((movieJson) => Movie.fromJson(movieJson))
+                                .toList() ??
+                            [],
+                      ),
                     ],
                   ),
                 ),

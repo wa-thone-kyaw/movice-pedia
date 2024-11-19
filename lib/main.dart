@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => WatchlistProvider()),
       ],
       child: MaterialApp(
-        title: 'Movie App',
+        title: 'Movice Pedia',
         theme: ThemeData(
           primarySwatch: Colors.blue,
           visualDensity: VisualDensity.adaptivePlatformDensity,
