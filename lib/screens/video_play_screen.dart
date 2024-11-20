@@ -7,6 +7,7 @@ class VideoPlayerScreen extends StatefulWidget {
   const VideoPlayerScreen({Key? key, required this.videoId}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _VideoPlayerScreenState createState() => _VideoPlayerScreenState();
 }
 

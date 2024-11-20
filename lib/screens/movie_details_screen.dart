@@ -6,7 +6,7 @@ import '../providers/movie_provider.dart';
 import '../widgets/cast_list.dart';
 import '../widgets/review_list.dart';
 import '../widgets/movie_list.dart';
-import 'package:flutter/scheduler.dart'; // Add this import
+import 'package:flutter/scheduler.dart';
 
 class MovieDetailsScreen extends StatefulWidget {
   final int movieId;
@@ -21,9 +21,8 @@ class _MovieDetailsScreenState extends State<MovieDetailsScreen> {
   @override
   void initState() {
     super.initState();
-    // Use addPostFrameCallback to delay the fetch operation
+
     SchedulerBinding.instance.addPostFrameCallback((_) {
-      // Fetch movie details on screen load after the first frame
       Provider.of<MovieProvider>(context, listen: false)
           .fetchMovieDetails(widget.movieId);
     });
@@ -45,7 +44,6 @@ class _MovieDetailsScreenState extends State<MovieDetailsScreen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      // Display movie backdrop image
                       if (movieProvider.movieDetails!.backdropPath.isNotEmpty)
                         Image.network(
                           'https://image.tmdb.org/t/p/w500${movieProvider.movieDetails!.backdropPath}',
@@ -70,7 +68,6 @@ class _MovieDetailsScreenState extends State<MovieDetailsScreen> {
                         Center(
                           child: ElevatedButton(
                             onPressed: () {
-                              // Navigate to the video player screen
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(

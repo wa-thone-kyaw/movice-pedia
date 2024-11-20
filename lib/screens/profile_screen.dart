@@ -5,10 +5,10 @@ class ProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Example user details; replace with actual user data
-    const String userName = "John Doe";
-    const String email = "john.doe@example.com";
-    const String userNameTag = "johndoe123";
+    // Example user details
+    const String userName = "WTK";
+    const String email = "wtk@example.com";
+    const String userNameTag = "WTk123";
 
     return Scaffold(
       appBar: AppBar(
@@ -31,12 +31,11 @@ class ProfileScreen extends StatelessWidget {
         padding: const EdgeInsets.all(16.0),
         child: ListView(
           children: [
-            // Profile Picture and Basic Info
-            Center(
+            const Center(
               child: Stack(
                 clipBehavior: Clip.none,
                 children: [
-                  const CircleAvatar(
+                  CircleAvatar(
                     radius: 60,
                     backgroundColor: Colors.deepPurple,
                     child: Icon(Icons.person, size: 60, color: Colors.white),
@@ -47,15 +46,14 @@ class ProfileScreen extends StatelessWidget {
                     child: CircleAvatar(
                       radius: 18,
                       backgroundColor: Colors.pink,
-                      child: const Icon(Icons.camera_alt,
-                          size: 20, color: Colors.white),
+                      child:
+                          Icon(Icons.camera_alt, size: 20, color: Colors.white),
                     ),
                   ),
                 ],
               ),
             ),
             const SizedBox(height: 24),
-            // User Information Card
             Card(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12),
@@ -66,9 +64,9 @@ class ProfileScreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
+                    const Text(
                       userName,
-                      style: const TextStyle(
+                      style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
                       ),
@@ -79,19 +77,17 @@ class ProfileScreen extends StatelessWidget {
                       style: TextStyle(fontSize: 16, color: Colors.grey[600]),
                     ),
                     const SizedBox(height: 8),
-                    Text(
+                    const Text(
                       email,
-                      style: const TextStyle(fontSize: 16),
+                      style: TextStyle(fontSize: 16),
                     ),
                   ],
                 ),
               ),
             ),
             const SizedBox(height: 32),
-            // Logout Button
             ElevatedButton.icon(
               onPressed: () {
-                // Handle logout logic
                 showDialog(
                   context: context,
                   builder: (context) => AlertDialog(
@@ -104,7 +100,6 @@ class ProfileScreen extends StatelessWidget {
                       ),
                       ElevatedButton(
                         onPressed: () {
-                          // Navigate back to login or home screen on logout
                           Navigator.popUntil(context, (route) => route.isFirst);
                         },
                         child: const Text("Logout"),

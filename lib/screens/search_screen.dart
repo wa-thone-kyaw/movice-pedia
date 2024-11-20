@@ -8,6 +8,7 @@ class SearchScreen extends StatefulWidget {
   const SearchScreen({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _SearchScreenState createState() => _SearchScreenState();
 }
 
@@ -17,7 +18,6 @@ class _SearchScreenState extends State<SearchScreen> {
   List<Movie> _searchResults = [];
   bool _isLoading = false;
 
-  // Perform search based on query
   Future<void> _performSearch(String query) async {
     if (query.isEmpty) return;
 
@@ -26,10 +26,8 @@ class _SearchScreenState extends State<SearchScreen> {
     });
 
     try {
-      // Fetch search results with the query
       final results = await _apiService.searchMovies(query, 1);
       setState(() {
-        // Map the results into Movie objects
         _searchResults = results.map((movie) => Movie.fromJson(movie)).toList();
       });
     } catch (error) {

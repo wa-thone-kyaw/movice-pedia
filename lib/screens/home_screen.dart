@@ -42,14 +42,14 @@ class _HomeScreenState extends State<HomeScreen> {
       case 2:
         return const WatchlistScreen();
       case 3:
-        return Center(
+        return const Center(
           child: Text(
             'Download Screen',
             style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
           ),
         );
       case 4:
-        return Center(
+        return const Center(
           child: Text(
             'Profile Screen',
             style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),

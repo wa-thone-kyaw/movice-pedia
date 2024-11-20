@@ -5,7 +5,6 @@ import '../utils/api_key.dart';
 class MovieApiService {
   static const String baseUrl = 'https://api.themoviedb.org/3';
 
-  // Fetch movies by category like "now_playing", "popular", etc.
   Future<List<dynamic>> fetchMovies(String category, int page) async {
     final response = await http.get(
       Uri.parse(
@@ -20,7 +19,6 @@ class MovieApiService {
     }
   }
 
-  // Search movies by query
   Future<List<dynamic>> searchMovies(String query, int page) async {
     final response = await http.get(
       Uri.parse(

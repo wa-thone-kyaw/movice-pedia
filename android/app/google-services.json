@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "332513890578",
+    "project_id": "movice-pedia",
+    "storage_bucket": "movice-pedia.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:332513890578:android:75ed12a43feb0ce80ba3cb",
+        "android_client_info": {
+          "package_name": "com.example.movice_pedia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "332513890578-rsdmabv58rner26ukgofvvghs9qo6lm8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXZUAKtrc6RAYBaZCz2NzQ1JU1gedSy5M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "332513890578-rsdmabv58rner26ukgofvvghs9qo6lm8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

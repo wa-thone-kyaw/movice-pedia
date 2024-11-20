@@ -6,13 +6,12 @@ import '../models/movie_details_model.dart';
 class MovieProvider with ChangeNotifier {
   final MovieApiService _apiService = MovieApiService();
 
-  // Movie lists for categories
   List<Movie> nowPlayingMovies = [];
   List<Movie> popularMovies = [];
   List<Movie> topRatedMovies = [];
   bool isLoading = false;
 
-  // Pagination state
+  // Pagination
   int nowPlayingPage = 1;
   int popularPage = 1;
   int topRatedPage = 1;
@@ -21,7 +20,6 @@ class MovieProvider with ChangeNotifier {
   MovieDetails? movieDetails;
   bool isMovieDetailsLoading = false;
 
-  // Fetch Movies with Pagination
   Future<void> fetchMovies(String category) async {
     if (isLoading) return;
     isLoading = true;

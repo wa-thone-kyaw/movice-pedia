@@ -31,7 +31,6 @@ class DownloadsScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // You can add your download items here, for example a list of downloaded movies or content.
             Text(
               'Downloaded Content:',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
